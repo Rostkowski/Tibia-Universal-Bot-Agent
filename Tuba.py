@@ -72,7 +72,7 @@ def loadSettings():
     global hpBarColor_b
 
     config = configparser.ConfigParser()
-    config.read('settings.ini')
+    config.read(pathlib.Path.home() / 'settings.ini')
     settings = config['DEFAULT']
     hotkey = str(settings['hotkeyselection'])
     HPCoords_x = settings['hpcoords_x']
